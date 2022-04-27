@@ -22,6 +22,7 @@ function App() {
           </a>
           .
         </p>
+        <button className="btn btn-primary">Squeege</button>
       </header>
     </div>
   );

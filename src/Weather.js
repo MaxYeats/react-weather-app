@@ -10,6 +10,8 @@ import { SpinnerRoundOutlined } from "spinners-react";
 
 import { useState } from "react";
 
+import FormattedDate from "./FormattedDate";
+
 //import ReactAnimatedWeather from "react-animated-weather";
 
 export default function Weather() {
@@ -54,6 +56,9 @@ export default function Weather() {
 
       wind: response.data.wind.speed,
       //see line 19, there could be another state, loaded:true,
+
+      date: new Date(response.data.dt * 1000),
+      time: response.data.timezone,
 
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
 
@@ -102,8 +107,9 @@ export default function Weather() {
           <div className="city-name">{city}</div>
 
           <div className="date-time">
-            <span className="date"> Monday, 5/1/2022 </span>{" "}
-            <span className="time">10:00</span>
+            <span>
+              <FormattedDate date={weather.date} />
+            </span>
           </div>
 
           <div className="row">

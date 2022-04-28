@@ -10,7 +10,7 @@ import { SpinnerRoundOutlined } from "spinners-react";
 
 import { useState } from "react";
 
-import FormattedDate from "./FormattedDate";
+import WeatherInfo from "./WeatherInfo";
 
 //import ReactAnimatedWeather from "react-animated-weather";
 
@@ -44,6 +44,7 @@ export default function Weather() {
     setLoaded(true);
 
     setWeather({
+      city: response.data.name,
       temperature: response.data.main.temp,
 
       tempmax: response.data.main.temp_max,
@@ -88,7 +89,7 @@ export default function Weather() {
         type="search"
         placeholder="Enter your city here"
         autoComplete="false"
-        autoFocus={true}
+        autoFocus="on"
         onChange={findCity}
       ></input>
 
@@ -97,49 +98,11 @@ export default function Weather() {
   );
 
   if (loaded) {
-    //see line 19, it could be if (weather.loaded){}
+    //see line 19, it could be: if (weather.loaded){}
     return (
       <div>
         {form}
-
-        <div className="container">
-          <div className="city-name">{city}</div>
-
-          <div className="date-time">
-            <span>
-              <FormattedDate date={weather.date} />
-            </span>
-          </div>
-
-          <div className="row">
-            <div className="col-3"></div>
-
-            <div className="col-3">
-              <div className="main-temperature">
-                {Math.round(weather.temperature)}°C
-              </div>
-
-              <div className="minmax-temp">
-                Min.{Math.round(weather.tempmin)}°C | Max.
-                {Math.round(weather.tempmax)}°C{" "}
-              </div>
-            </div>
-
-            <div className="col-3">
-              <div className="icon">
-                <img src={weather.icon} alt={weather.description} />
-              </div>
-
-              <div className="description">{weather.description}</div>
-
-              <div className="humidity">Humidity: {weather.humidity}%</div>
-
-              <div className="wind">Wind: {Math.round(weather.wind)} m/s</div>
-            </div>
-
-            <div className="col-3"></div>
-          </div>
-        </div>
+        <WeatherInfo data={weather} />
       </div>
     );
   } else {

@@ -16,17 +16,18 @@ export default function Weather() {
   const [city, setCity] = useState("");
 
   const [loaded, setLoaded] = useState(false);
+  //or eliminate line above and below could be const [weather, setWeather ] = useState({loaded:false});
 
   const [weather, setWeather] = useState({});
 
   function startSearch(event) {
     event.preventDefault();
 
-    let apiKey = "badf18efb01c292c50887b64f1fc7ebd";
+    const apiKey = "badf18efb01c292c50887b64f1fc7ebd";
 
-    let units = "metric";
+    const units = "metric";
 
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=${apiKey}`;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=${apiKey}`;
 
     axios.get(apiUrl).then(findWeather);
   }
@@ -52,6 +53,7 @@ export default function Weather() {
       humidity: response.data.main.humidity,
 
       wind: response.data.wind.speed,
+      //see line 19, there could be another state, loaded:true,
 
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
 
@@ -91,6 +93,7 @@ export default function Weather() {
   );
 
   if (loaded) {
+    //see line 19, it could be if (weather.loaded){}
     return (
       <div>
         {form}
@@ -119,14 +122,14 @@ export default function Weather() {
 
             <div className="col-3">
               <div className="icon">
-                <img src={weather.icon} alt="weather icon" />
+                <img src={weather.icon} alt={weather.description} />
               </div>
 
               <div className="description">{weather.description}</div>
 
               <div className="humidity">Humidity: {weather.humidity}%</div>
 
-              <div className="wind">Wind: {Math.round(weather.wind)}m/s</div>
+              <div className="wind">Wind: {Math.round(weather.wind)} m/s</div>
             </div>
 
             <div className="col-3"></div>

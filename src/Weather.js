@@ -83,7 +83,7 @@ export default function Weather() {
         className="react-input"
         type="search"
         placeholder="Enter your city here"
-        autoComplete={false}
+        autoComplete="false"
         autoFocus={true}
         onChange={findCity}
       ></input>

@@ -58,7 +58,6 @@ export default function Weather() {
       //see line 19, there could be another state, loaded:true,
 
       date: new Date(response.data.dt * 1000),
-      time: response.data.timezone,
 
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
 

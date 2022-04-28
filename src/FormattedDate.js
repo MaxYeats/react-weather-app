@@ -4,6 +4,7 @@ import React from "react";
 
 export default function FormattedDate(props) {
   console.log(props.date);
+
   let weekdays = [
     "Sunday",
     "Monday",
@@ -47,4 +48,3 @@ export default function FormattedDate(props) {
     </div>
   );
 }
-//this is time of user NOT the searched city's

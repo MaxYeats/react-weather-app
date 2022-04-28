@@ -14,7 +14,7 @@ function App() {
         <p className="github-link">
           This is an open-sourced project built by{" "}
           <a
-            href="https://github.com/MaxYeats/react-weather"
+            href="https://github.com/MaxYeats/react-weather-app"
             title="link to Melissa's GitHub project page"
             target="_blank"
             rel="noreferrer"

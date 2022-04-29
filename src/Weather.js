@@ -12,8 +12,6 @@ import { useState } from "react";
 
 import WeatherInfo from "./WeatherInfo";
 
-//import ReactAnimatedWeather from "react-animated-weather";
-
 export default function Weather() {
   const [city, setCity] = useState("");
 
@@ -60,7 +58,7 @@ export default function Weather() {
 
       date: new Date(response.data.dt * 1000),
 
-      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
 
       //(
 

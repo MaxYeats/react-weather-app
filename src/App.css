@@ -115,3 +115,36 @@
   line-height: 1;
   top: -34px;
 }
+
+@media (max-width: 1025px) {
+  .city-name,
+  .main-temperature {
+    font-size: 70px;
+  }
+
+  .main-temperature,
+  .temp-units,
+  .minmax-temp {
+    position: relative;
+    right: -1px;
+  }
+
+  .icon,
+  .description,
+  .humidity,
+  .wind {
+    position: relative;
+    left: -50px;
+  }
+
+  .minmax-temp,
+  .description,
+  .humidity,
+  .wind {
+    font-size: 14px;
+  }
+
+  .github-link {
+    font-size: 10px;
+  }
+}

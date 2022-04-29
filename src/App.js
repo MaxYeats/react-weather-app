@@ -21,7 +21,6 @@ function App() {
           >
             Melissa Tseng
           </a>
-          .
         </p>
       </header>
     </div>

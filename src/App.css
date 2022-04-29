@@ -63,10 +63,15 @@
 }
 
 .main-temperature {
-  font-size: 80px;
+  font-size: 50px;
   font-family: var(--primary-font);
   position: relative;
   top: -18px;
+}
+
+.temp-units {
+  font-size: 24px;
+  vertical-align: super;
 }
 
 .minmax-temp {
@@ -107,19 +112,11 @@
 
   padding: 20px;
 }
-.temp-units {
-  color: #fff;
-  font-size: 24px;
-  font-weight: 400;
-  position: relative;
-  line-height: 1;
-  top: -34px;
-}
 
 @media (max-width: 1025px) {
   .city-name,
   .main-temperature {
-    font-size: 70px;
+    font-size: 65px;
   }
 
   .main-temperature,

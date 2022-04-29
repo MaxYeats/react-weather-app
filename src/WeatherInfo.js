@@ -2,6 +2,8 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
+import "./App.css";
 
 export default function WeatherInfo(props) {
   return (
@@ -15,20 +17,16 @@ export default function WeatherInfo(props) {
       </div>
 
       <div className="row">
-        <div className="col-3"></div>
-
-        <div className="col-3">
-          <div className="main-temperature">
-            {Math.round(props.data.temperature)}°C
-          </div>
+        <div className="col-6">
+          <WeatherTemperature celsius={props.data.temperature} />
 
           <div className="minmax-temp">
-            Min.{Math.round(props.data.tempmin)}°C | Max.
+            Min. {Math.round(props.data.tempmin)}°C | Max. {""}
             {Math.round(props.data.tempmax)}°C{" "}
           </div>
         </div>
 
-        <div className="col-3">
+        <div className="col-6">
           <div className="icon">
             <WeatherIcon code={props.data.icon} />
           </div>
@@ -39,8 +37,6 @@ export default function WeatherInfo(props) {
 
           <div className="wind">Wind: {Math.round(props.data.wind)} m/s</div>
         </div>
-
-        <div className="col-3"></div>
       </div>
     </div>
   );

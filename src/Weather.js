@@ -16,7 +16,7 @@ export default function Weather() {
   const [city, setCity] = useState("");
 
   const [loaded, setLoaded] = useState(false);
-  //or eliminate line above and below could be const [weather, setWeather ] = useState({loaded:false});
+  //or eliminate line above and below could be: const [weather, setWeather ] = useState({loaded:false});
 
   const [weather, setWeather] = useState({});
 
@@ -59,24 +59,6 @@ export default function Weather() {
       date: new Date(response.data.dt * 1000),
 
       icon: response.data.weather[0].icon,
-
-      //(
-
-      // <ReactAnimatedWeather
-
-      // icon="CLEAR_DAY"
-
-      // color="white"
-
-      // size={70}
-
-      //animate="true"
-
-      ///>
-
-      //),
-
-      // icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
   }
 

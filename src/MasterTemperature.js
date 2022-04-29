@@ -26,10 +26,18 @@ export default function MasterTemperature(props) {
             °F
           </a>
         </div>
+
+        <div className="minmax-temp">
+          Min. {Math.round(props.min)}°C | Max. {""}
+          {Math.round(props.max)}°C{" "}
+        </div>
       </div>
     );
   } else {
     let fahrenheit = (props.celsius * 9) / 5 + 32;
+    let minimumfahrenheit = (props.min * 9) / 5 + 32;
+    let maximumfahrenheit = (props.max * 9) / 5 + 32;
+
     return (
       <div className="MasterTemperature">
         <div className="main-temperature">
@@ -38,6 +46,11 @@ export default function MasterTemperature(props) {
             °C{" "}
           </a>
           | °F
+        </div>
+
+        <div className="minmax-temp">
+          Min. {Math.round(minimumfahrenheit)}°F | Max. {""}
+          {Math.round(maximumfahrenheit)}°F{" "}
         </div>
       </div>
     );

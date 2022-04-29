@@ -19,12 +19,11 @@ export default function WeatherInfo(props) {
 
       <div className="row">
         <div className="col-6">
-          <MasterTemperature celsius={props.data.temperature} />
-
-          <div className="minmax-temp">
-            Min. {Math.round(props.data.tempmin)}°C | Max. {""}
-            {Math.round(props.data.tempmax)}°C{" "}
-          </div>
+          <MasterTemperature
+            celsius={props.data.temperature}
+            min={props.data.tempmin}
+            max={props.data.tempmax}
+          />
         </div>
 
         <div className="col-6">

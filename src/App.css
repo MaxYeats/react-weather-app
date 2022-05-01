@@ -75,6 +75,16 @@
   font-size: 24px;
   vertical-align: super;
 }
+.inactive {
+  text-decoration: none;
+  color: #fff;
+}
+.inactive:hover {
+  text-decoration: none;
+  color: #fff;
+  cursor: default;
+  transition: all 100ms ease-in-out;
+}
 
 .minmax-temp {
   font-size: 18px;

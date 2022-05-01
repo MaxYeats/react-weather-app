@@ -68,7 +68,9 @@
   position: relative;
   top: -18px;
 }
-
+.big-temperature {
+  font-size: 50px;
+}
 .temp-units {
   font-size: 24px;
   vertical-align: super;

@@ -66,7 +66,7 @@
   font-size: 50px;
   font-family: var(--primary-font);
   position: relative;
-  top: -18px;
+  top: -14px;
 }
 .big-temperature {
   font-size: 50px;
@@ -89,11 +89,11 @@
 .minmax-temp {
   font-size: 18px;
   position: relative;
-  top: -24px;
+  top: -15px;
 }
 .icon {
   position: relative;
-  top: 2px;
+  top: 3px;
 }
 
 .description {
@@ -105,10 +105,9 @@
   font-size: 16px;
 }
 
-.main-temperature,
-.minmax-temp {
+#MasterTemperature {
   position: relative;
-  right: -160px;
+  right: -170px;
 }
 
 .icon,
@@ -116,7 +115,7 @@
 .humidity,
 .wind {
   position: relative;
-  left: -160px;
+  left: -130px;
 }
 
 .row {

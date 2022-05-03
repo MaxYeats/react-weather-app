@@ -53,7 +53,7 @@
 }
 
 .city-name {
-  font-size: 90px;
+  font-size: 80px;
 
   font-family: var(--primary-font);
 }
@@ -69,7 +69,7 @@
   top: -14px;
 }
 .big-temperature {
-  font-size: 70px;
+  font-size: 50px;
 }
 .temp-units {
   font-size: 24px;
@@ -104,12 +104,14 @@
 }
 
 .description {
-  font-size: 22px;
+  font-size: 24px;
 }
 
 .humidity,
 .wind {
-  font-size: 16px;
+  font-size: 14px;
+  position: relative;
+  top: -15px;
 }
 
 #MasterTemperature {
@@ -118,11 +120,9 @@
 }
 
 .icon,
-.description,
-.humidity,
-.wind {
+.description {
   position: relative;
-  left: -130px;
+  left: -150px;
 }
 
 .row {
@@ -139,15 +139,15 @@
 
   .main-temperature,
   .temp-units,
-  .minmax-temp {
+  .minmax-temp,
+  .humidity,
+  .wind {
     position: relative;
     right: -1px;
   }
 
   .icon,
-  .description,
-  .humidity,
-  .wind {
+  .description {
     position: relative;
     left: -50px;
   }
@@ -156,7 +156,7 @@
   .description,
   .humidity,
   .wind {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .github-link {
@@ -168,7 +168,7 @@
   text-align: center;
 }
 .WeatherForecast-temperatures {
-  font-size: 22px;
+  font-size: 20px;
 }
 .WeatherForecast-tempmin {
   opacity: 0.6;

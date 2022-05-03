@@ -44,6 +44,8 @@ export default function Weather() {
 
     setWeather({
       city: response.data.name,
+      coordinates: response.data.coord,
+
       temperature: response.data.main.temp,
 
       tempmax: response.data.main.temp_max,
@@ -84,7 +86,7 @@ export default function Weather() {
       <div>
         {form}
         <WeatherInfo data={weather} />
-        <WeatherForecast />
+        <WeatherForecast coordinates={weather.coordinates} />
       </div>
     );
   } else {

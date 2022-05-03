@@ -11,6 +11,7 @@ import { SpinnerRoundOutlined } from "spinners-react";
 import { useState } from "react";
 
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather() {
   const [city, setCity] = useState("");
@@ -83,6 +84,7 @@ export default function Weather() {
       <div>
         {form}
         <WeatherInfo data={weather} />
+        <WeatherForecast />
       </div>
     );
   } else {

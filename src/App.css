@@ -69,7 +69,7 @@
   top: -14px;
 }
 .big-temperature {
-  font-size: 50px;
+  font-size: 70px;
 }
 .temp-units {
   font-size: 24px;
@@ -84,6 +84,13 @@
   color: #fff;
   cursor: default;
   transition: all 100ms ease-in-out;
+}
+.active {
+  text-decoration: none;
+  color: rgb(88, 152, 226);
+}
+.active:hover {
+  color: rgb(226, 171, 88);
 }
 
 .minmax-temp {
@@ -155,4 +162,15 @@
   .github-link {
     font-size: 10px;
   }
+}
+
+.WeatherForecast {
+  text-align: center;
+}
+.WeatherForecast-temperatures {
+  font-size: 22px;
+}
+.WeatherForecast-tempmin {
+  opacity: 0.6;
+  margin-left: 5px;
 }

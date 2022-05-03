@@ -27,7 +27,7 @@ export default function MasterTemperature(props) {
               °C
             </a>{" "}
             |{" "}
-            <a href="/" onClick={showFahrenheit}>
+            <a href="/" onClick={showFahrenheit} className="active">
               °F
             </a>
           </span>
@@ -49,7 +49,7 @@ export default function MasterTemperature(props) {
         <div className="main-temperature">
           <span className="big-temperature">{Math.round(fahrenheit)}</span>
           <span className="temp-units">
-            <a href="/" onClick={showCelsius}>
+            <a href="/" onClick={showCelsius} className="active">
               °C
             </a>{" "}
             |

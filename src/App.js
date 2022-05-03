@@ -18,6 +18,7 @@ function App() {
             title="link to Melissa's GitHub project page"
             target="_blank"
             rel="noreferrer"
+            className="active"
           >
             Melissa Tseng
           </a>

@@ -18,17 +18,17 @@ export default function WeatherInfo(props) {
       </div>
 
       <div className="row">
-        <div className="col-6" id="MasterTemperature">
+        <div className="col-4" id="MasterTemperature">
           <MasterTemperature
             celsius={props.data.temperature}
             min={props.data.tempmin}
             max={props.data.tempmax}
           />
         </div>
-
+        <div className="col-2" id="erased-column"></div>
         <div className="col-6" id="RightColumn">
           <div className="icon">
-            <WeatherIcon code={props.data.icon} />
+            <WeatherIcon code={props.data.icon} size={60} />
           </div>
 
           <div className="description">{props.data.description}</div>

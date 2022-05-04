@@ -3,35 +3,40 @@
 import React from "react";
 
 import { useState } from "react";
-import WeatherIcon from "./WeatherIcon";
+
 import axios from "axios";
+import WeatherForecastDay from "./WeatherForecastDay";
 
 export default function WeatherForecast(props) {
-  function showForecast(response) {
-    console.log(response.data);
+  let [loaded, setLoaded] = useState(false);
+  let [forecast, setForecast] = useState(null);
+
+  function handleResponse(response) {
+    setForecast(response.data.daily);
+    setLoaded(true);
   }
 
-  const apiKey = "badf18efb01c292c50887b64f1fc7ebd";
-  const units = "metric";
-  let lat = props.coordinates.lat;
-  let lon = props.coordinates.lon;
-
-  const apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude={part}&units=${units}&appid=${apiKey}`;
-  axios.get(apiUrl).then(showForecast);
-
-  //https://api.openweathermap.org/data/2.5/onecall?lat=40.7&lon=-74&exclude=hourly,daily&appid=badf18efb01c292c50887b64f1fc7ebd
-  return (
-    <div className="WeatherForecast">
-      <div className="row">
-        <div className="col">
-          <div className="WeatherForecast-day">Thu</div>
-          <WeatherIcon code="01d" size={48} />
-          <div className="WeatherForecast-temperatures">
-            <span className="WeatherForecast-tempmin">10°</span>
-            <span className="WeatherForecast-tempmax">19°</span>
+  if (loaded) {
+    return (
+      <div className="WeatherForecast">
+        <div className="row">
+          <div className="col">
+            <WeatherForecastDay data={forecast[0]} />
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    const apiKey = "badf18efb01c292c50887b64f1fc7ebd";
+    const units = "metric";
+    let lat = props.coordinates.lat;
+    let lon = props.coordinates.lon;
+
+    const apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude={part}&units=${units}&appid=${apiKey}`;
+    axios.get(apiUrl).then(handleResponse);
+
+    //https://api.openweathermap.org/data/2.5/onecall?lat=40.7&lon=-74&exclude=hourly,daily&appid=badf18efb01c292c50887b64f1fc7ebd
+
+    return null;
+  }
 }

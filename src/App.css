@@ -131,25 +131,32 @@
   padding: 20px;
 }
 
+.WeatherForecast {
+  text-align: center;
+}
+.WeatherForecast-temperatures {
+  font-size: 20px;
+}
+.WeatherForecast-tempmin {
+  opacity: 0.6;
+  margin-left: 5px;
+}
+
 @media (max-width: 1025px) {
   .city-name,
   .main-temperature {
-    font-size: 65px;
+    font-size: 60px;
   }
 
-  .main-temperature,
-  .temp-units,
-  .minmax-temp,
-  .humidity,
-  .wind {
+  #MasterTemperature {
     position: relative;
-    right: -1px;
+    right: -20px;
   }
 
   .icon,
   .description {
     position: relative;
-    left: -50px;
+    left: -40px;
   }
 
   .minmax-temp,
@@ -162,15 +169,11 @@
   .github-link {
     font-size: 10px;
   }
-}
+  .WeatherForecast-day {
+    font-size: 14px;
+  }
 
-.WeatherForecast {
-  text-align: center;
-}
-.WeatherForecast-temperatures {
-  font-size: 20px;
-}
-.WeatherForecast-tempmin {
-  opacity: 0.6;
-  margin-left: 5px;
+  .WeatherForecast-temperatures {
+    display: none;
+  }
 }

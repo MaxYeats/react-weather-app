@@ -38,7 +38,7 @@ export default function Weather() {
   }
 
   function findWeather(response) {
-    console.log(response.data);
+    //console.log(response.data);
 
     setLoaded(true);
 

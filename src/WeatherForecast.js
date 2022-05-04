@@ -3,6 +3,7 @@
 import React from "react";
 
 import { useState } from "react";
+import { useEffect } from "react";
 
 import axios from "axios";
 import WeatherForecastDay from "./WeatherForecastDay";
@@ -10,6 +11,12 @@ import WeatherForecastDay from "./WeatherForecastDay";
 export default function WeatherForecast(props) {
   let [loaded, setLoaded] = useState(false);
   let [forecast, setForecast] = useState(null);
+
+  useEffect(() => {
+    setLoaded(false);
+  }, [props.coordinates]);
+
+  //useEffect is needed whenever you need to change something (here, coordinates) after content is already loaded. Without useEffect, the loaded would always be true and the props.coordinates would never be updated, and the 7-day forecast would not be updated according to a new city.
 
   function handleResponse(response) {
     setForecast(response.data.daily);
@@ -21,13 +28,14 @@ export default function WeatherForecast(props) {
       <div className="WeatherForecast">
         <div className="row">
           {forecast.map(function (dailyForecast, index) {
-            if (index < 6) {
+            if (index < 7) {
               return (
                 <div className="col" key={index}>
                   <WeatherForecastDay data={dailyForecast} />
                 </div>
               );
             }
+            return null;
           })}
         </div>
       </div>

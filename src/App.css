@@ -21,7 +21,7 @@
 
   font-size: calc(10px + 2vmin);
 
-  color: rgb(45, 71, 143);
+  color: #3f48cc;
   border: 20px solid #fff;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .github-link {
-  font-size: 15px;
+  font-size: 16px;
 
   font-family: var(--secondary-font);
   padding: 20px;
@@ -45,6 +45,8 @@
   font-size: 20px;
 
   font-family: var(--primary-font);
+  border-radius: 5px;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4);
 }
 
 .search-button {
@@ -53,6 +55,18 @@
   font-family: var(--primary-font);
 
   border-radius: 5px;
+  box-shadow: 8px 5px 5px rgba(0, 0, 0, 0.4);
+
+  background-color: #3f48cc;
+  border: 1px solid #3f48cc;
+  color: aliceblue;
+}
+.search-button:hover {
+  background-color: rgb(223, 227, 214);
+  border: 3px solid #3f48cc;
+  color: #3f48cc;
+  transition: all 200ms ease-out;
+  font-weight: 700;
 }
 
 .city-name {
@@ -80,20 +94,21 @@
 }
 .inactive {
   text-decoration: none;
-  color: rgb(18, 42, 102);
+  color: #3f48cc;
 }
 .inactive:hover {
   text-decoration: none;
-  color: rgb(18, 42, 102);
+  color: #3f48cc;
   cursor: default;
   transition: all 100ms ease-in-out;
 }
 .active {
   text-decoration: none;
-  color: rgb(88, 152, 226);
+  color: #07a656;
 }
 .active:hover {
-  color: rgb(226, 171, 88);
+  color: rgb(235, 156, 39);
+  text-decoration: underline;
 }
 
 .minmax-temp {
@@ -184,4 +199,33 @@
 .soccerball2 {
   display: block;
   margin: 0 auto;
+}
+
+.soccergirl {
+  margin: 0 auto;
+  width: 160px;
+  height: 180px;
+}
+
+.soccerball1 {
+  margin: 0 auto;
+  height: 40px;
+  width: 40px;
+}
+
+#Weather-data-border {
+  border: 3px solid #3f48cc;
+  box-shadow: 8px 5px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 7px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.WeatherForecast-border {
+  border: 3px solid #3f48cc;
+  box-shadow: 8px 5px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 7px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }

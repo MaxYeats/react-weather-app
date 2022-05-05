@@ -83,25 +83,29 @@ export default function Weather() {
   let soccerballGif = require("./icons8-soccer-ball1.gif");
   let soccerballGif2 = require("./icons8-soccer-ball.gif");
 
-  let walkingGif = require("./icons8-walking1.gif");
+  let soccerGirl = require("./girl2.png");
   //let soccerfield = require("./soccerfield3.png");
   if (loaded) {
     //see line 19, it could be: if (weather.loaded){}
     return (
       <div className="Weather">
         {form}
-        <div className="row">
-          <div className="col-1">
-            <img src={walkingGif} alt="Walking icon by Icons8"></img>
-          </div>
-          <div className="col-10">
+        <div className="row" id="Weather-data-border">
+          <div className="col">
             <WeatherInfo data={weather} />
-          </div>
-          <div className="col-1">
-            <img src={soccerballGif} alt="Soccer Ball icon by Icons8"></img>
+            <img
+              src={soccerGirl}
+              alt="Girl playing soccer"
+              className="soccergirl"
+            ></img>
+            <img
+              src={soccerballGif}
+              alt="Soccer Ball icon by Icons8"
+              className="soccerball1"
+            ></img>
           </div>
         </div>
-        <div>
+        <div className="WeatherForecast-border">
           <WeatherForecast coordinates={weather.coordinates} />
         </div>
       </div>

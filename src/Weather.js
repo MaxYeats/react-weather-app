@@ -6,7 +6,7 @@ import axios from "axios";
 
 import "./App.css";
 
-import { SpinnerRoundOutlined } from "spinners-react";
+import { SpinnerDotted } from "spinners-react";
 
 import { useState } from "react";
 
@@ -79,14 +79,29 @@ export default function Weather() {
       <input className="search-button" type="submit" value="Search"></input>
     </form>
   );
+  let soccerballGif = require("./icons8-soccer-ball1.gif");
+
+  let walkingGif = require("./icons8-walking1.gif");
 
   if (loaded) {
     //see line 19, it could be: if (weather.loaded){}
     return (
-      <div>
+      <div className="Weather">
         {form}
-        <WeatherInfo data={weather} />
-        <WeatherForecast coordinates={weather.coordinates} />
+        <div className="row">
+          <div className="col-1">
+            <img src={walkingGif} alt="Walking icon by Icons8"></img>
+          </div>
+          <div className="col-10">
+            <WeatherInfo data={weather} />
+          </div>
+          <div className="col-1">
+            <img src={soccerballGif} alt="Soccer Ball icon by Icons8"></img>
+          </div>
+        </div>
+        <div>
+          <WeatherForecast coordinates={weather.coordinates} />
+        </div>
       </div>
     );
   } else {
@@ -94,7 +109,7 @@ export default function Weather() {
       <div>
         {form}
 
-        <SpinnerRoundOutlined size="30%" thickness="30" color="5EE6EB" />
+        <SpinnerDotted size="40%" thickness="20" color="#fff" speed="50" />
       </div>
     );
   }

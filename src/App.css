@@ -9,7 +9,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #084808;
 
   min-height: 100vh;
 
@@ -22,6 +22,7 @@
   font-size: calc(10px + 2vmin);
 
   color: white;
+  border: 20px solid #fff;
 }
 
 .App {
@@ -32,6 +33,8 @@
   font-size: 15px;
 
   font-family: var(--secondary-font);
+  padding: 20px;
+  margin: 0;
 }
 
 .react-form {
@@ -116,13 +119,13 @@
 
 #MasterTemperature {
   position: relative;
-  right: -170px;
+  right: -160px;
 }
 
 .icon,
 .description {
   position: relative;
-  left: -150px;
+  left: -130px;
 }
 
 .row {

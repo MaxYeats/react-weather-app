@@ -9,7 +9,14 @@
 }
 
 .App-header {
-  background: #fff;
+  background: rgb(227, 235, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(227, 235, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 13%,
+    rgba(255, 255, 255, 1) 81%,
+    rgba(188, 208, 233, 1) 93%
+  );
 
   min-height: 100vh;
 
@@ -22,7 +29,6 @@
   font-size: calc(10px + 2vmin);
 
   color: #3f48cc;
-  border: 20px solid #fff;
 }
 
 .App {
@@ -38,15 +44,16 @@
 }
 
 .react-form {
-  padding: 60px 20px 20px 20px;
+  padding: 40px 20px 20px 20px;
 }
 
 .react-input {
-  font-size: 20px;
+  font-size: 22px;
 
   font-family: var(--primary-font);
   border-radius: 5px;
   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4);
+  border: 3px solid #3f48cc;
 }
 
 .search-button {
@@ -60,12 +67,14 @@
   background-color: #3f48cc;
   border: 1px solid #3f48cc;
   color: aliceblue;
+  padding: 3px 6px;
 }
 .search-button:hover {
-  background-color: rgb(223, 227, 214);
+  background-color: rgb(250, 236, 249);
   border: 3px solid #3f48cc;
   color: #3f48cc;
   transition: all 200ms ease-out;
+  padding: 1px 6px;
   font-weight: 700;
 }
 
@@ -104,7 +113,7 @@
 }
 .active {
   text-decoration: none;
-  color: #07a656;
+  color: #d23ad7;
 }
 .active:hover {
   color: rgb(235, 156, 39);
@@ -195,10 +204,29 @@
     display: none;
   }
 }
+.first-page {
+  border: 3px solid #3f48cc;
+  box-shadow: 8px 5px 5px rgba(0, 0, 0, 0.4);
 
-.soccerball2 {
-  display: block;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding-bottom: 40px;
+  border-radius: 7px;
+}
+
+.soccergirl-front {
   margin: 0 auto;
+  width: 320px;
+  height: 320px;
+  opacity: 0.8;
+}
+
+.soccerball1-front {
+  margin: 0 auto;
+  height: 60px;
+  width: 60px;
+  vertical-align: bottom;
+  opacity: 0.8;
 }
 
 .soccergirl {

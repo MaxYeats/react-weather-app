@@ -12,7 +12,6 @@ import { useState } from "react";
 
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
-import background from "./soccerfield5.png";
 
 export default function Weather() {
   const [city, setCity] = useState("");
@@ -81,10 +80,9 @@ export default function Weather() {
     </form>
   );
   let soccerballGif = require("./icons8-soccer-ball1.gif");
-  let soccerballGif2 = require("./icons8-soccer-ball.gif");
 
   let soccerGirl = require("./girl2.png");
-  //let soccerfield = require("./soccerfield3.png");
+
   if (loaded) {
     //see line 19, it could be: if (weather.loaded){}
     return (
@@ -112,16 +110,18 @@ export default function Weather() {
     );
   } else {
     return (
-      <div
-        className="first-page"
-        style={{ backgroundImage: `url(${background})` }}
-      >
+      <div className="first-page">
         {form}
         <img
-          src={soccerballGif2}
+          src={soccerGirl}
+          alt="Girl playing soccer"
+          className="soccergirl-front"
+        ></img>
+        <img
+          src={soccerballGif}
           alt="Soccer Ball icon by Icons8"
-          className="soccerball2"
-        />
+          className="soccerball1-front"
+        ></img>
       </div>
     );
   }

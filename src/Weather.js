@@ -6,12 +6,13 @@ import axios from "axios";
 
 import "./App.css";
 
-import { SpinnerDotted } from "spinners-react";
+//import { SpinnerDotted } from "spinners-react";
 
 import { useState } from "react";
 
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
+import background from "./soccerfield5.png";
 
 export default function Weather() {
   const [city, setCity] = useState("");
@@ -80,9 +81,10 @@ export default function Weather() {
     </form>
   );
   let soccerballGif = require("./icons8-soccer-ball1.gif");
+  let soccerballGif2 = require("./icons8-soccer-ball.gif");
 
   let walkingGif = require("./icons8-walking1.gif");
-
+  //let soccerfield = require("./soccerfield3.png");
   if (loaded) {
     //see line 19, it could be: if (weather.loaded){}
     return (
@@ -106,15 +108,21 @@ export default function Weather() {
     );
   } else {
     return (
-      <div>
+      <div
+        className="first-page"
+        style={{ backgroundImage: `url(${background})` }}
+      >
         {form}
-
-        <SpinnerDotted size="40%" thickness="20" color="#fff" speed="50" />
+        <img
+          src={soccerballGif2}
+          alt="Soccer Ball icon by Icons8"
+          className="soccerball2"
+        />
       </div>
     );
   }
-
-  //return <SpinnerRoundOutlined size="30%" thickness="30" color="5EE6EB" />;
 }
 
 //<img src={weather.icon} alt={weather.description}/>
+//<SpinnerDotted size="40%" thickness="20" color="#fff" speed="50" />
+//return <SpinnerRoundOutlined size="30%" thickness="30" color="5EE6EB" />;

@@ -9,7 +9,7 @@
 }
 
 .App-header {
-  background-color: #084808;
+  background: #fff;
 
   min-height: 100vh;
 
@@ -21,7 +21,7 @@
 
   font-size: calc(10px + 2vmin);
 
-  color: white;
+  color: rgb(45, 71, 143);
   border: 20px solid #fff;
 }
 
@@ -80,11 +80,11 @@
 }
 .inactive {
   text-decoration: none;
-  color: #fff;
+  color: rgb(18, 42, 102);
 }
 .inactive:hover {
   text-decoration: none;
-  color: #fff;
+  color: rgb(18, 42, 102);
   cursor: default;
   transition: all 100ms ease-in-out;
 }
@@ -179,4 +179,9 @@
   .WeatherForecast-temperatures {
     display: none;
   }
+}
+
+.soccerball2 {
+  display: block;
+  margin: 0 auto;
 }

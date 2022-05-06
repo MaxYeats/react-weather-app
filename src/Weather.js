@@ -81,7 +81,7 @@ export default function Weather() {
   );
   let soccerballGif = require("./icons8-soccer-ball1.gif");
 
-  let soccerGirl = require("./girl2.png");
+  let soccerGirl = require("./girl3.png");
 
   if (loaded) {
     //see line 19, it could be: if (weather.loaded){}

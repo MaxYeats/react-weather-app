@@ -9,13 +9,14 @@
 }
 
 .App-header {
-  background: rgb(227, 235, 255);
+  background: rgb(156, 203, 255);
   background: linear-gradient(
     180deg,
-    rgba(227, 235, 255, 1) 0%,
-    rgba(255, 255, 255, 1) 13%,
-    rgba(255, 255, 255, 1) 81%,
-    rgba(188, 208, 233, 1) 93%
+    rgba(156, 203, 255, 1) 0%,
+    rgba(245, 251, 255, 1) 4%,
+    rgba(253, 254, 255, 1) 24%,
+    rgba(255, 255, 255, 1) 69%,
+    rgba(108, 176, 25, 1) 100%
   );
 
   min-height: 100vh;
@@ -33,6 +34,31 @@
 
 .App {
   text-align: center;
+}
+
+.first-page {
+  border: 3px solid #3f48cc;
+  box-shadow: 8px 5px 5px rgba(0, 0, 0, 0.4);
+
+  margin-left: 100px;
+  margin-right: 100px;
+  padding-bottom: 40px;
+  border-radius: 7px;
+}
+
+.soccergirl-front {
+  margin: 0 auto;
+  width: 320px;
+  height: 320px;
+  opacity: 0.8;
+}
+
+.soccerball1-front {
+  margin: 0 auto;
+  height: 60px;
+  width: 60px;
+  vertical-align: bottom;
+  opacity: 0.8;
 }
 
 .github-link {
@@ -76,6 +102,14 @@
   transition: all 200ms ease-out;
   padding: 1px 6px;
   font-weight: 700;
+}
+
+#Weather-data-border {
+  border: 3px solid #3f48cc;
+  box-shadow: 8px 5px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 7px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .city-name {
@@ -125,6 +159,13 @@
   position: relative;
   top: -15px;
 }
+
+.humidity,
+.wind {
+  font-size: 14px;
+  position: relative;
+  top: -15px;
+}
 .icon {
   position: relative;
   top: 3px;
@@ -132,13 +173,6 @@
 
 .description {
   font-size: 24px;
-}
-
-.humidity,
-.wind {
-  font-size: 14px;
-  position: relative;
-  top: -15px;
 }
 
 #MasterTemperature {
@@ -158,6 +192,27 @@
   padding: 20px;
 }
 
+.soccergirl {
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+}
+
+.soccerball1 {
+  margin: 0 auto;
+  height: 40px;
+  width: 40px;
+  vertical-align: bottom;
+}
+
+.WeatherForecast-border {
+  border: 3px solid #3f48cc;
+  box-shadow: 8px 5px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 7px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
 .WeatherForecast {
   text-align: center;
 }
@@ -172,18 +227,18 @@
 @media (max-width: 1025px) {
   .city-name,
   .main-temperature {
-    font-size: 60px;
+    font-size: 50px;
   }
 
   #MasterTemperature {
     position: relative;
-    right: -20px;
+    right: 2px;
   }
 
   .icon,
   .description {
     position: relative;
-    left: -40px;
+    left: -10px;
   }
 
   .minmax-temp,
@@ -191,6 +246,16 @@
   .humidity,
   .wind {
     font-size: 12px;
+  }
+
+  .soccergirl {
+    width: 80px;
+    height: 100px;
+  }
+
+  .soccerball1 {
+    height: 20px;
+    width: 20px;
   }
 
   .github-link {
@@ -203,58 +268,4 @@
   .WeatherForecast-temperatures {
     display: none;
   }
-}
-.first-page {
-  border: 3px solid #3f48cc;
-  box-shadow: 8px 5px 5px rgba(0, 0, 0, 0.4);
-
-  margin-left: 100px;
-  margin-right: 100px;
-  padding-bottom: 40px;
-  border-radius: 7px;
-}
-
-.soccergirl-front {
-  margin: 0 auto;
-  width: 320px;
-  height: 320px;
-  opacity: 0.8;
-}
-
-.soccerball1-front {
-  margin: 0 auto;
-  height: 60px;
-  width: 60px;
-  vertical-align: bottom;
-  opacity: 0.8;
-}
-
-.soccergirl {
-  margin: 0 auto;
-  width: 160px;
-  height: 180px;
-}
-
-.soccerball1 {
-  margin: 0 auto;
-  height: 40px;
-  width: 40px;
-  vertical-align: bottom;
-}
-
-#Weather-data-border {
-  border: 3px solid #3f48cc;
-  box-shadow: 8px 5px 5px rgba(0, 0, 0, 0.4);
-  border-radius: 7px;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.WeatherForecast-border {
-  border: 3px solid #3f48cc;
-  box-shadow: 8px 5px 5px rgba(0, 0, 0, 0.4);
-  border-radius: 7px;
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
 }

@@ -8,6 +8,10 @@
   --branding-color: rgb(66, 108, 163);
 }
 
+html {
+  background: rgb(156, 203, 255);
+}
+
 .App-header {
   background: rgb(156, 203, 255);
   background: linear-gradient(
@@ -18,7 +22,6 @@
     rgba(255, 255, 255, 1) 69%,
     rgba(108, 176, 25, 1) 100%
   );
-
   min-height: 100vh;
 
   flex-direction: column;
@@ -39,7 +42,7 @@
 .first-page {
   border: 3px solid #3f48cc;
   box-shadow: 8px 5px 5px rgba(0, 0, 0, 0.4);
-
+  margin-top: 20px;
   margin-left: 100px;
   margin-right: 100px;
 
